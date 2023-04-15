@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Mix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg style="display: none;">
+    <defs>
+        <filter id="noise">
+            <feTurbulence
+              baseFrequency="0.7,0.8"
+              seed="0"
+              type="fractalNoise"
+              result="static"
+            >
+              <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="card.mouseenter"                           
+              />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="static">
+              <animate
+                attributeName="scale"
+                values="0;40;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="card.mouseenter"                           
+              />
+            </feDisplacementMap>
+          </filter>  
+    </defs>
+</svg>
+
+
+<div id="card">
+    <img src="./images/sub1.png" alt="">
+</div>
+
+
+<svg style="display: none;">
+    <defs>
+        <filter id="noisetwo">
+            <feTurbulence
+              baseFrequency="0.7,0.8"
+              seed="0"
+              type="fractalNoise"
+              result="static"
+            >
+              <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="two.mouseenter"                           
+              />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="static">
+              <animate
+                attributeName="scale"
+                values="0;40;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="two.mouseenter"                           
+              />
+            </feDisplacementMap>
+          </filter>  
+    </defs>
+</svg>
+
+<div id="two">
+    <img src="./images/rover2.png" alt="">
+</div>
+
+<svg style="display: none;">
+    <defs>
+        <filter id="noisethree">
+            <feTurbulence
+              baseFrequency="0.7,0.8"
+              seed="0"
+              type="fractalNoise"
+              result="static"
+            >
+              <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="three.mouseenter"                           
+              />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="static">
+              <animate
+                attributeName="scale"
+                values="0;40;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="three.mouseenter"                           
+              />
+            </feDisplacementMap>
+          </filter>  
+    </defs>
+</svg>
+
+<div id="three">
+    <img src="./images/roverpink.png" alt="">
+</div>
+
+
+</body>
+</html>

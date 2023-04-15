@@ -1,0 +1,112 @@
+body {
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: 500px;
+    justify-items: center;
+    align-content: center;
+
+    /* justify-content: space-around; */
+    background-color: rgb(16 23 24);
+    
+    margin: 0;
+    padding: 1rem;
+    /* overflow-x: hidden; */
+}
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#card {
+    min-width: 300px;
+    max-width: 500px;
+    aspect-ratio: 4 / 5;
+    border: 0.25 solid gray;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+    filter: url(#noise);
+}
+
+#card:hover > img {
+    animation: pulse 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+#two {
+    min-width: 300px;
+    max-width: 500px;
+    aspect-ratio: 4 / 5;
+    border: 0.25 solid gray;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#two img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+    filter: url(#noisetwo);
+}
+
+#two:hover > img {
+    animation: pulse 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#three {
+    min-width: 300px;
+    max-width: 500px;
+    aspect-ratio: 4 / 5;
+    border: 0.25 solid gray;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#three img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+    filter: url(#noisethree);
+}
+
+#three:hover > img {
+    animation: pulse 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+
+
+figcaption {
+    color: white;
+    position: relative;
+    /* bottom: 250px; */
+    /* left: 3rem; */
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+@keyframes pulse {
+    from, to {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.08;
+    }
+}
